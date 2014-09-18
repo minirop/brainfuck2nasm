@@ -41,7 +41,7 @@ int main(int argc, char** argv)
 		char c = program[i];
 		switch(c)
 		{
-			// smashable instructions
+			// mashable instructions
 			case '+':
 			case '-':
 			case '<':
@@ -51,7 +51,7 @@ int main(int argc, char** argv)
 				else
 					instructions.push_back(std::make_pair(c, 1));
 				break;
-			// non-smashable instructions
+			// non-mashable instructions
 			case '[':
 				if(program[i+1] == '-' && program[i+2] == ']')
 				{
