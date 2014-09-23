@@ -12,6 +12,9 @@ Basically it does those:
 - `.` and `,` become respectively a call to `putchar` and `putchar`.
 
 Some small optimizations are made:
-- multiple similar "inc" are merged into an "add".
-- I developed it under windows, libc could be striped out to use interruptions.
+- multiple similar "inc" are merged into an "add". (`+++` becomes `add [ptr], 3`, etc.)
+
+Possible optimisations:
+- I developed it under windows, on linux libc can be striped out to use interruptions.
+- remove useless code, i.e. `+-` or `<>`.
 - probably others.
